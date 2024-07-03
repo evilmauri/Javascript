@@ -1,0 +1,11 @@
+Que aprendi con JAVASCRIPT
+-JS es un lenguaje de programacion.
+-siempre que se declare una variable/s se utiliza VAR.
+-La estructura de una pagina web es de un hipertexto(HTML) se puede visualizar con el arbol DOM.
+-URL=direccion del archivo(se envia al servidor mediante la url)
+-CSS le da formato a la pagina web.
+-Utilizar Javascript y Jquery unidos para programar.
+Las funciones utilizadas settimeOut=para esfumar el texto, importacion de imagenes.
+-Canvas en HTML, la forma que utiliza las funciones. Trazar segmentos rectos dados su punto de inicio y final.
+-Aprendi a usar las funciones setInterval para que una figura, borrarla, modificar su posicion y luego su tamano.
+-Reforzando los fundamentos a la programacion orientada a objetos, como usar los constructores y prototipos para compartir entre los objetos los distintos metodos.
