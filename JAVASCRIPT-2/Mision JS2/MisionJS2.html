@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+    <title>Un lienzo para animar</title>
+</head>
+<body>
+
+    <canvas id="canvas" width="400" height="400"></canvas>
+    <h1 id="parrafo"></h1>
+    <script>
+
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+
+        var color = function () {
+            var colores = ["Black", "Red", "Blue", "Orange", "Green", "Cyan"]
+            var aleatorio = colores[Math.floor(Math.random() * colores.length)]
+            var color = ctx.fillStyle = aleatorio
+            return color
+        }
+        var m = color()
+        var tamanoY = 400
+        var tamanoX = 0
+        var position = 0
+
+        setInterval(function () {
+            ctx.clearRect(0, 0, 400, 400);
+            ctx.fillRect(position, 0, tamanoX, tamanoY);
+
+            if (tamanoX == tamanoY) {
+                tamanoX--;
+                tamanoY--;
+                if (tamanoX <= 0) {
+                    tamanoY = 400
+                    position = 0
+                    var cambio = color()
+                }
+            } else {
+                tamanoX++;
+                position++
+                tamanoY--
+            }
+        }, 10);
+
+        var tamaños = function () {
+        return `El Largo es = ${tamanoY} El Alto es = ${tamanoY}`;
+    }
+
+    $("#canvas").click(function (event) {
+        var cambiocolor = color()
+        var texto = tamaños();
+    $("#parrafo").text(texto);
+    })
+
+</script>
+</body>
+
+</html>
